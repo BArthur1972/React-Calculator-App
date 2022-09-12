@@ -18,6 +18,7 @@ function App() {
 		setCalc(calc + value);
 
 	if (!ops.includes(value)) {
+		// eslint-disable-next-line
 		setResult(eval(calc + value).toString());
 	}
 	}
@@ -39,11 +40,12 @@ function App() {
 	}
 
 	const calculate = () => {
+		// eslint-disable-next-line
 		setCalc(eval(calc.toString()));
 	}
 
 	const deleteLast = () => {
-		if (calc == '') {
+		if (calc === '') {
 			return;
 		}
 		else {
